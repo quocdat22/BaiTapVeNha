@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\datho\\OneDrive\\Documents\\CNTT\\Ky thuat lap trinh\\thuc hanh\\btvn\\BTVN_Dat_Phong\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3FAF6DC3-0B30-4C2F-9DB4-F960F98E4023}|BTVN_Dat_Phong\\BTVN_Dat_Phong.vcxproj|C:\\Users\\datho\\OneDrive\\Documents\\CNTT\\Ky thuat lap trinh\\thuc hanh\\btvn\\BTVN_Dat_Phong\\BTVN_Dat_Phong\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{3FAF6DC3-0B30-4C2F-9DB4-F960F98E4023}|BTVN_Dat_Phong\\BTVN_Dat_Phong.vcxproj|solutionrelative:BTVN_Dat_Phong\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{3FAF6DC3-0B30-4C2F-9DB4-F960F98E4023}|BTVN_Dat_Phong\\BTVN_Dat_Phong.vcxproj|C:\\Users\\datho\\OneDrive\\Documents\\CNTT\\Ky thuat lap trinh\\thuc hanh\\btvn\\BTVN_Dat_Phong\\BTVN_Dat_Phong\\Bai14.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{3FAF6DC3-0B30-4C2F-9DB4-F960F98E4023}|BTVN_Dat_Phong\\BTVN_Dat_Phong.vcxproj|solutionrelative:BTVN_Dat_Phong\\Bai14.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3FAF6DC3-0B30-4C2F-9DB4-F960F98E4023}|BTVN_Dat_Phong\\BTVN_Dat_Phong.vcxproj|C:\\Users\\datho\\OneDrive\\Documents\\CNTT\\Ky thuat lap trinh\\thuc hanh\\btvn\\BTVN_Dat_Phong\\BTVN_Dat_Phong\\BaiTapVeNha.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{3FAF6DC3-0B30-4C2F-9DB4-F960F98E4023}|BTVN_Dat_Phong\\BTVN_Dat_Phong.vcxproj|solutionrelative:BTVN_Dat_Phong\\BaiTapVeNha.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3FAF6DC3-0B30-4C2F-9DB4-F960F98E4023}|BTVN_Dat_Phong\\BTVN_Dat_Phong.vcxproj|C:\\Users\\datho\\OneDrive\\Documents\\CNTT\\Ky thuat lap trinh\\thuc hanh\\btvn\\BTVN_Dat_Phong\\BTVN_Dat_Phong\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{3FAF6DC3-0B30-4C2F-9DB4-F960F98E4023}|BTVN_Dat_Phong\\BTVN_Dat_Phong.vcxproj|solutionrelative:BTVN_Dat_Phong\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3FAF6DC3-0B30-4C2F-9DB4-F960F98E4023}|BTVN_Dat_Phong\\BTVN_Dat_Phong.vcxproj|C:\\Users\\datho\\OneDrive\\Documents\\CNTT\\Ky thuat lap trinh\\thuc hanh\\btvn\\BTVN_Dat_Phong\\BTVN_Dat_Phong\\Bai13.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -38,11 +42,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
+              "Title": "Bai14.cpp",
+              "DocumentMoniker": "C:\\Users\\datho\\OneDrive\\Documents\\CNTT\\Ky thuat lap trinh\\thuc hanh\\btvn\\BTVN_Dat_Phong\\BTVN_Dat_Phong\\Bai14.cpp",
+              "RelativeDocumentMoniker": "BTVN_Dat_Phong\\Bai14.cpp",
+              "ToolTip": "C:\\Users\\datho\\OneDrive\\Documents\\CNTT\\Ky thuat lap trinh\\thuc hanh\\btvn\\BTVN_Dat_Phong\\BTVN_Dat_Phong\\Bai14.cpp",
+              "RelativeToolTip": "BTVN_Dat_Phong\\Bai14.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-08-03T11:41:34.135Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Bai13.cpp",
               "DocumentMoniker": "C:\\Users\\datho\\OneDrive\\Documents\\CNTT\\Ky thuat lap trinh\\thuc hanh\\btvn\\BTVN_Dat_Phong\\BTVN_Dat_Phong\\Bai13.cpp",
               "RelativeDocumentMoniker": "BTVN_Dat_Phong\\Bai13.cpp",
@@ -50,12 +67,11 @@
               "RelativeToolTip": "BTVN_Dat_Phong\\Bai13.cpp",
               "ViewState": "AQIAABUAAAAAAAAAAAAAAB0AAAALAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-08-03T11:37:43.19Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-03T11:37:43.19Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Bai12.cpp",
               "DocumentMoniker": "C:\\Users\\datho\\OneDrive\\Documents\\CNTT\\Ky thuat lap trinh\\thuc hanh\\btvn\\BTVN_Dat_Phong\\BTVN_Dat_Phong\\Bai12.cpp",
               "RelativeDocumentMoniker": "BTVN_Dat_Phong\\Bai12.cpp",
@@ -67,7 +83,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Bai11.cpp",
               "DocumentMoniker": "C:\\Users\\datho\\OneDrive\\Documents\\CNTT\\Ky thuat lap trinh\\thuc hanh\\btvn\\BTVN_Dat_Phong\\BTVN_Dat_Phong\\Bai11.cpp",
               "RelativeDocumentMoniker": "BTVN_Dat_Phong\\Bai11.cpp",
@@ -79,7 +95,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "Bai10.cpp",
               "DocumentMoniker": "C:\\Users\\datho\\OneDrive\\Documents\\CNTT\\Ky thuat lap trinh\\thuc hanh\\btvn\\BTVN_Dat_Phong\\BTVN_Dat_Phong\\Bai10.cpp",
               "RelativeDocumentMoniker": "BTVN_Dat_Phong\\Bai10.cpp",
@@ -91,7 +107,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "Bai9.cpp",
               "DocumentMoniker": "C:\\Users\\datho\\OneDrive\\Documents\\CNTT\\Ky thuat lap trinh\\thuc hanh\\btvn\\BTVN_Dat_Phong\\BTVN_Dat_Phong\\Bai9.cpp",
               "RelativeDocumentMoniker": "BTVN_Dat_Phong\\Bai9.cpp",
@@ -116,13 +132,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "main.cpp",
               "DocumentMoniker": "C:\\Users\\datho\\OneDrive\\Documents\\CNTT\\Ky thuat lap trinh\\thuc hanh\\btvn\\BTVN_Dat_Phong\\BTVN_Dat_Phong\\main.cpp",
               "RelativeDocumentMoniker": "BTVN_Dat_Phong\\main.cpp",
               "ToolTip": "C:\\Users\\datho\\OneDrive\\Documents\\CNTT\\Ky thuat lap trinh\\thuc hanh\\btvn\\BTVN_Dat_Phong\\BTVN_Dat_Phong\\main.cpp",
               "RelativeToolTip": "BTVN_Dat_Phong\\main.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAABAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAKAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-08-03T11:10:41.888Z",
               "EditorCaption": ""
