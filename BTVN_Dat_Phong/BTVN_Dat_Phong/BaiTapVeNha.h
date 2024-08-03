@@ -8,6 +8,8 @@ void buoi1_bai10();
 
 void buoi1_bai11();
 
+void buoi1_bai12();
+
 
 
 
