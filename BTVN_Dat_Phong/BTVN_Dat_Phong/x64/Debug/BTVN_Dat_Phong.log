@@ -1,0 +1,15 @@
+﻿  Bai9.cpp
+C:\Users\datho\OneDrive\Documents\CNTT\Ky thuat lap trinh\thuc hanh\btvn\BTVN_Dat_Phong\BTVN_Dat_Phong\Bai9.cpp(7,9): warning C4477: 'printf' : format string '%x' requires an argument of type 'unsigned int', but variadic argument 2 has type 'float **'
+C:\Users\datho\OneDrive\Documents\CNTT\Ky thuat lap trinh\thuc hanh\btvn\BTVN_Dat_Phong\BTVN_Dat_Phong\Bai9.cpp(7,9): warning C4313: 'printf': '%x' in format string conflicts with argument 2 of type 'float **'
+C:\Users\datho\OneDrive\Documents\CNTT\Ky thuat lap trinh\thuc hanh\btvn\BTVN_Dat_Phong\BTVN_Dat_Phong\Bai9.cpp(13,9): warning C4477: 'printf' : format string '%x' requires an argument of type 'unsigned int', but variadic argument 2 has type 'float **'
+C:\Users\datho\OneDrive\Documents\CNTT\Ky thuat lap trinh\thuc hanh\btvn\BTVN_Dat_Phong\BTVN_Dat_Phong\Bai9.cpp(13,9): warning C4313: 'printf': '%x' in format string conflicts with argument 2 of type 'float **'
+C:\Users\datho\OneDrive\Documents\CNTT\Ky thuat lap trinh\thuc hanh\btvn\BTVN_Dat_Phong\BTVN_Dat_Phong\Bai9.cpp(19,9): warning C4477: 'printf' : format string '%x' requires an argument of type 'unsigned int', but variadic argument 2 has type 'float **'
+C:\Users\datho\OneDrive\Documents\CNTT\Ky thuat lap trinh\thuc hanh\btvn\BTVN_Dat_Phong\BTVN_Dat_Phong\Bai9.cpp(19,9): warning C4313: 'printf': '%x' in format string conflicts with argument 2 of type 'float **'
+C:\Users\datho\OneDrive\Documents\CNTT\Ky thuat lap trinh\thuc hanh\btvn\BTVN_Dat_Phong\BTVN_Dat_Phong\Bai9.cpp(25,9): warning C4477: 'printf' : format string '%x' requires an argument of type 'unsigned int', but variadic argument 2 has type 'float **'
+C:\Users\datho\OneDrive\Documents\CNTT\Ky thuat lap trinh\thuc hanh\btvn\BTVN_Dat_Phong\BTVN_Dat_Phong\Bai9.cpp(25,9): warning C4313: 'printf': '%x' in format string conflicts with argument 2 of type 'float **'
+C:\Users\datho\OneDrive\Documents\CNTT\Ky thuat lap trinh\thuc hanh\btvn\BTVN_Dat_Phong\BTVN_Dat_Phong\Bai9.cpp(30,10): warning C4305: 'initializing': truncation from 'double' to 'float'
+C:\Users\datho\OneDrive\Documents\CNTT\Ky thuat lap trinh\thuc hanh\btvn\BTVN_Dat_Phong\BTVN_Dat_Phong\Bai9.cpp(30,19): warning C4305: 'initializing': truncation from 'double' to 'float'
+  main.cpp
+C:\Users\datho\OneDrive\Documents\CNTT\Ky thuat lap trinh\thuc hanh\btvn\BTVN_Dat_Phong\BTVN_Dat_Phong\main.cpp(4,6): warning C4326: return type of 'main' should be 'int' instead of 'void'
+  Generating Code...
+  BTVN_Dat_Phong.vcxproj -> C:\Users\datho\OneDrive\Documents\CNTT\Ky thuat lap trinh\thuc hanh\btvn\BTVN_Dat_Phong\x64\Debug\BTVN_Dat_Phong.exe
