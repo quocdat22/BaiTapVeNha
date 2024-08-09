@@ -61,6 +61,25 @@ int timMaxBien(int a[][100], int m, int n) {
 	return max;
 }
 
+//Trong ma trận có bao nhiêu phần tử có chữ số 2 xuất hiện trong các chữ số của nó.
+int demSoLuongPhanTuChuaChuSo2(int a[][100], int m, int n) {
+	int dem = 0;
+	for (int i = 0; i < m; i++) {
+		for (int j = 0; j < n; j++) {
+			int temp = a[i][j];
+			while (temp != 0) {
+				int chuSo = temp % 10;
+				if (chuSo == 2) {
+					dem++;
+					break;
+				}
+				temp /= 10;
+			}
+		}
+	}
+	return dem;
+}
+
 void bai3() {
 	srand(time(NULL));
 	int m = 5;
@@ -76,6 +95,8 @@ void bai3() {
 
 
 	printf("\nPhan tu lon nhat tren bien cua ma tran la: %d", timMaxBien(a, m, n));
+
+	printf("\nSo luong phan tu chua chu so 2 trong ma tran la: %d", demSoLuongPhanTuChuaChuSo2(a, m, n));
 
 
 	return;
