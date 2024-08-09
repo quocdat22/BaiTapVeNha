@@ -53,7 +53,21 @@ void sapXepCacDong(int maTran[][100], int n) {
         }
     }
 }
-
+// Hàm sắp xếp các cột của ma trận
+void sapXepCacCot(int maTran[][100], int n) {
+    for (int j = 0; j < n; j++) {
+        for (int i = 0; i < n - 1; i++) {
+            for (int k = i + 1; k < n; k++) {
+                if ((j % 2 == 0 && maTran[i][j] > maTran[k][j]) ||
+                    (j % 2 != 0 && maTran[i][j] < maTran[k][j])) {
+                    int temp = maTran[i][j];
+                    maTran[i][j] = maTran[k][j];
+                    maTran[k][j] = temp;
+                }
+            }
+        }
+    }
+}
 
 int main() {
     int maTran[100][100], n = 5;
@@ -73,8 +87,12 @@ int main() {
    /* sapXepDuongCheoPhu(maTran, n);
     inMang2Chieu(maTran, n);*/
 
-    sapXepCacDong(maTran, n);
+    /*sapXepCacDong(maTran, n);
     printf("Ma tran sau khi sap xep cac dong:\n");
+    inMang2Chieu(maTran, n);*/
+
+    sapXepCacCot(maTran, n);
+    printf("Ma tran sau khi sap xep cac cot:\n");
     inMang2Chieu(maTran, n);
 
     
