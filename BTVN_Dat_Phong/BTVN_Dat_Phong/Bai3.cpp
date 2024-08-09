@@ -175,6 +175,23 @@ int kiemTraZiczacDong(int a[][100], int m, int n) {
 	return 1; // Thỏa mãn điều kiện giảm dần theo dòng
 }
 
+//Liệt kê chỉ số các dòng chứa toàn giá trị chẵn
+void lietKeCacDongChuaToanGiaTriChan(int a[][100], int m, int n) {
+	printf("Cac dong chua toan gia tri chan la:");
+	for (int i = 0; i < m; i++) {
+		int flag = 1;
+		for (int j = 0; j < n; j++) {
+			if (a[i][j] % 2 != 0) {
+				flag = 0;
+				break;
+			}
+		}
+		if (flag == 1) {
+			printf("%5d", i);
+		}
+	}
+}
+
 void bai3() {
 	srand(time(NULL));
 	int m = 5;
@@ -208,7 +225,16 @@ void bai3() {
 	sapXepMaTranLeGiamChanTang(a, m, n);
 	printf("Mang 2 chieu sau khi sap xep theo yeu cau: \n");
 	xuatMang2ChieuBai3(a, m, n);
-	
+
+	if (kiemTraZiczacCot(a, m, n) == 1) {
+		printf("Ma tran zicic");
+	}
+	else {
+		printf("Ma tran khong zicic");
+	}
+
+	lietKeCacDongChuaToanGiaTriChan(a, m, n);
+		
 
 
 	return;
