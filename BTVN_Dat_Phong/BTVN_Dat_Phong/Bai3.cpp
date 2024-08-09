@@ -264,6 +264,28 @@ int timChuSoXuatHienNhieuNhat(int demChuSo[]) {
 	return maxChuSo;
 }
 
+//Liệt kê các cột có tổng nhỏ nhất trong ma trận
+void lietKeCotCoTongNhoNhat(int a[][100], int m, int n) {
+	int sum[100] = { 0 };
+	for (int j = 0; j < n; j++) {
+		for (int i = 0; i < m; i++) {
+			sum[j] += a[i][j];
+		}
+	}
+	int minSum = sum[0];
+	for (int j = 1; j < n; j++) {
+		if (sum[j] < minSum) {
+			minSum = sum[j];
+		}
+	}
+	printf("Cac cot co tong nho nhat la:");
+	for (int j = 0; j < n; j++) {
+		if (sum[j] == minSum) {
+			printf("%5d", j);
+		}
+	}
+}
+
 void bai3() {
 	srand(time(NULL));
 	int m = 5;
