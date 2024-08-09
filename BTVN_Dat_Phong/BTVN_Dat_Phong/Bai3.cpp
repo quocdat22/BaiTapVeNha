@@ -235,6 +235,35 @@ int timGiaTriXuatHienNhieuNhat(int a[][100], int m, int n) {
 	return maxValue;
 }
 
+//Tìm các chữ số xuất hiện nhiều nhất trong ma trận
+void demChuSo(int a[][100], int m, int n, int demChuSo[]) {
+	for (int i = 0; i < m; i++) {
+		for (int j = 0; j < n; j++) {
+			int temp = a[i][j];
+			if (temp == 0) {
+				demChuSo[0]++;
+			}
+			while (temp != 0) {
+				int chuSo = temp % 10;
+				demChuSo[chuSo]++;
+				temp /= 10;
+			}
+		}
+	}
+}
+// Hàm tìm chữ số xuất hiện nhiều nhất
+int timChuSoXuatHienNhieuNhat(int demChuSo[]) {
+	int maxChuSo = 0;
+	int maxLanXuatHien = demChuSo[0];
+	for (int i = 1; i < 10; i++) {
+		if (demChuSo[i] > maxLanXuatHien) {
+			maxChuSo = i;
+			maxLanXuatHien = demChuSo[i];
+		}
+	}
+	return maxChuSo;
+}
+
 void bai3() {
 	srand(time(NULL));
 	int m = 5;
@@ -281,6 +310,13 @@ void bai3() {
 	lietKeCacDongChuaGiaTriGiamDan(a, m, n);
 
 	printf("Gia tri xuat hien nhieu nhat trong ma tran la: %d", timGiaTriXuatHienNhieuNhat(a, m, n));
+
+	// Đếm chữ số
+	int demChuSoC[10] = { 0 }; // Mảng đếm chữ số từ 0 đến 9
+	demChuSo(a, m, n, demChuSoC);
+	// Tìm chữ số xuất hiện nhiều nhất
+	int chuSoNhieuNhat = timChuSoXuatHienNhieuNhat(demChuSoC);
+	printf("Chu so xuat hien nhieu nhat trong ma tran la: %d\n", chuSoNhieuNhat);
 
 
 
