@@ -1,0 +1,63 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+
+// Hàm sắp xếp đường chéo phụ tăng dần/giảm dần
+void sapXepDuongCheoPhu(int maTran[][100], int n) {
+    int duongCheoPhu[100], soPhanTu = 0;
+    for (int i = 0; i < n; i++) {
+        duongCheoPhu[soPhanTu++] = maTran[i][n - i - 1];
+    }
+
+    // Sắp xếp tăng dần
+    for (int i = 0; i < soPhanTu - 1; i++) {
+        for (int j = i + 1; j < soPhanTu; j++) {
+            if (duongCheoPhu[i] > duongCheoPhu[j]) {
+                int temp = duongCheoPhu[i];
+                duongCheoPhu[i] = duongCheoPhu[j];
+                duongCheoPhu[j] = temp;
+            }
+        }
+    }
+
+    // Gán lại vào ma trận
+    for (int i = 0; i < n; i++) {
+        maTran[i][n - i - 1] = duongCheoPhu[i];
+    }
+}
+
+//in mang 2 chieu
+void inMang2Chieu(int maTran[][100], int n) {
+    printf("Ma tran sau khi sap xep:\n");
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++) {
+            printf("%d ", maTran[i][j]);
+        }
+        printf("\n");
+    }
+}
+
+
+int main() {
+    int maTran[100][100], n = 5;
+
+    // Khởi tạo giá trị ngẫu nhiên cho ma trận
+    srand(time(NULL));
+    printf("Ma tran ngau nhien 5x5:\n");
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++) {
+            maTran[i][j] = rand() % 100;
+            printf("%d ", maTran[i][j]);
+        }
+        printf("\n");
+    }
+
+    // Gọi các hàm xử lý ma trận
+    sapXepDuongCheoPhu(maTran, n);
+    inMang2Chieu(maTran, n);
+
+    
+
+    return 0;
+}

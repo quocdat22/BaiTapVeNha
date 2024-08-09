@@ -51,6 +51,9 @@
     <ClCompile Include="Bai3.cpp">
       <Filter>Source Files\Buoi3</Filter>
     </ClCompile>
+    <ClCompile Include="Bai4.cpp">
+      <Filter>Source Files\Buoi3</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BaiTapVeNha.h">
