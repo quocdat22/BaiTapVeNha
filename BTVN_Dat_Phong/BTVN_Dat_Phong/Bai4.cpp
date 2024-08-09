@@ -68,6 +68,51 @@ void sapXepCacCot(int maTran[][100], int n) {
         }
     }
 }
+// Hàm sắp xếp đường chéo chính và các đường chéo song song với nó
+void sapXepDuongCheoChinhVaSongSong(int maTran[][100], int n) {
+    int temp[100];
+    for (int start = 0; start < n; start++) {
+        int soPhanTu = 0;
+        for (int i = 0; i < n - start; i++) {
+            temp[soPhanTu++] = maTran[start + i][i];
+        }
+        // Sắp xếp đường chéo
+        for (int i = 0; i < soPhanTu - 1; i++) {
+            for (int j = i + 1; j < soPhanTu; j++) {
+                if (temp[i] > temp[j]) {
+                    int tmp = temp[i];
+                    temp[i] = temp[j];
+                    temp[j] = tmp;
+                }
+            }
+        }
+        // Gán lại vào ma trận
+        for (int i = 0; i < n - start; i++) {
+            maTran[start + i][i] = temp[i];
+        }
+    }
+
+    for (int start = 1; start < n; start++) {
+        int soPhanTu = 0;
+        for (int i = 0; i < n - start; i++) {
+            temp[soPhanTu++] = maTran[i][start + i];
+        }
+        // Sắp xếp đường chéo
+        for (int i = 0; i < soPhanTu - 1; i++) {
+            for (int j = i + 1; j < soPhanTu; j++) {
+                if (temp[i] > temp[j]) {
+                    int tmp = temp[i];
+                    temp[i] = temp[j];
+                    temp[j] = tmp;
+                }
+            }
+        }
+        // Gán lại vào ma trận
+        for (int i = 0; i < n - start; i++) {
+            maTran[i][start + i] = temp[i];
+        }
+    }
+}
 
 int main() {
     int maTran[100][100], n = 5;
@@ -91,8 +136,12 @@ int main() {
     printf("Ma tran sau khi sap xep cac dong:\n");
     inMang2Chieu(maTran, n);*/
 
-    sapXepCacCot(maTran, n);
+    /*sapXepCacCot(maTran, n);
     printf("Ma tran sau khi sap xep cac cot:\n");
+    inMang2Chieu(maTran, n);*/
+
+    sapXepDuongCheoChinhVaSongSong(maTran, n);
+    printf("Ma tran sau khi sap xep duong cheo chinh va song song:\n");
     inMang2Chieu(maTran, n);
 
     
