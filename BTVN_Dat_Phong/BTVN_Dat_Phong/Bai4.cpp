@@ -145,6 +145,18 @@ void diChuyenChanLe(int maTran[][100], int n) {
     }
 }
 
+// Hàm kiểm tra đối xứng qua đường chéo chính
+int kiemTraDoiXung(int maTran[][100], int n) {
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < i; j++) {
+            if (maTran[i][j] != maTran[j][i]) {
+                return 0;
+            }
+        }
+    }
+    return 1;
+}
+
 
 int main() {
     int maTran[100][100], n = 5;
@@ -176,9 +188,16 @@ int main() {
     printf("Ma tran sau khi sap xep duong cheo chinh va song song:\n");
     inMang2Chieu(maTran, n);*/
 
-    diChuyenChanLe(maTran, n);
+    /*diChuyenChanLe(maTran, n);
     printf("Ma tran sau khi di chuyen cac phan tu chan len tren, le xuong duoi:\n");
-    inMang2Chieu(maTran, n);
+    inMang2Chieu(maTran, n);*/
+
+    if (kiemTraDoiXung(maTran, n)) {
+		printf("Ma tran doi xung qua duong cheo chinh\n");
+	}
+	else {
+		printf("Ma tran khong doi xung qua duong cheo chinh\n");
+	}
 
     
 
