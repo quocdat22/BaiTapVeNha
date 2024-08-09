@@ -114,6 +114,38 @@ void sapXepDuongCheoChinhVaSongSong(int maTran[][100], int n) {
     }
 }
 
+
+void diChuyenChanLe(int maTran[][100], int n) {
+    int temp[10000];
+    int chiSoChan = 0, chiSoLe = n * n - 1;
+
+    // Duyệt qua toàn bộ ma trận và sắp xếp phần tử vào mảng tạm
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++) {
+            if (maTran[i][j] % 2 == 0) {
+                temp[chiSoChan++] = maTran[i][j];
+            }
+            else {
+                temp[chiSoLe--] = maTran[i][j];
+            }
+        }
+    }
+
+    // Gán lại các giá trị từ mảng tạm vào ma trận, phần chẵn trước, phần lẻ sau
+    int index = 0;
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++) {
+            if (index <= chiSoLe) {
+                maTran[i][j] = temp[index++];
+            }
+            else {
+                maTran[i][j] = temp[chiSoChan++];
+            }
+        }
+    }
+}
+
+
 int main() {
     int maTran[100][100], n = 5;
 
@@ -140,8 +172,12 @@ int main() {
     printf("Ma tran sau khi sap xep cac cot:\n");
     inMang2Chieu(maTran, n);*/
 
-    sapXepDuongCheoChinhVaSongSong(maTran, n);
+    /*sapXepDuongCheoChinhVaSongSong(maTran, n);
     printf("Ma tran sau khi sap xep duong cheo chinh va song song:\n");
+    inMang2Chieu(maTran, n);*/
+
+    diChuyenChanLe(maTran, n);
+    printf("Ma tran sau khi di chuyen cac phan tu chan len tren, le xuong duoi:\n");
     inMang2Chieu(maTran, n);
 
     
