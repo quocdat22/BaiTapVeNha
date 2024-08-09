@@ -80,6 +80,28 @@ int demSoLuongPhanTuChuaChuSo2(int a[][100], int m, int n) {
 	return dem;
 }
 
+//Xuất các phần tử cực tiểu của ma trận.
+void xuatCacPhanTuCucTieu(int a[][100], int m, int n) {
+	printf("Cac phan tu cuc tieu trong ma tran\n");
+	printf("Vi tri (Dong-Cot)\t Gia tri\n");
+	for (int i = 0; i < m; i++) {
+		for (int j = 0; j < n; j++) {
+			int current = a[i][j];
+			int isMin = 1;
+
+			if (i > 0 && a[i - 1][j] <= current) isMin = 0;
+			if (i < m - 1 && a[i + 1][j] <= current) isMin = 0;
+			if (j > 0 && a[i][j - 1] <= current) isMin = 0;
+			if (j < n - 1 && a[i][j + 1] <= current) isMin = 0;
+
+			if (isMin) {
+				printf("%2d-%d\t\t\t%5d\n", i, j, current);
+			}
+		}
+	}
+	printf("\n");
+}
+
 void bai3() {
 	srand(time(NULL));
 	int m = 5;
@@ -97,6 +119,8 @@ void bai3() {
 	printf("\nPhan tu lon nhat tren bien cua ma tran la: %d", timMaxBien(a, m, n));
 
 	printf("\nSo luong phan tu chua chu so 2 trong ma tran la: %d", demSoLuongPhanTuChuaChuSo2(a, m, n));
+
+	xuatCacPhanTuCucTieu(a, m, n);
 
 
 	return;
