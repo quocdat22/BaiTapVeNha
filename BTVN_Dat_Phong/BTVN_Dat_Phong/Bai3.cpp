@@ -210,6 +210,31 @@ void lietKeCacDongChuaGiaTriGiamDan(int a[][100], int m, int n) {
 	}
 }
 
+//Tìm giá trị xuất hiện nhiều nhất trong ma trận
+int timGiaTriXuatHienNhieuNhat(int a[][100], int m, int n) {
+	int maxCount = 0;
+	int maxValue = a[0][0];
+	for (int i = 0; i < m; i++) {
+		for (int j = 0; j < n; j++) {
+			int current = a[i][j];
+			int count = 1;
+			for (int k = i; k < m; k++) {
+				for (int l = 0; l < n; l++) {
+					if (k == i && l <= j) continue;
+					if (a[k][l] == current) {
+						count++;
+					}
+				}
+			}
+			if (count > maxCount) {
+				maxCount = count;
+				maxValue = current;
+			}
+		}
+	}
+	return maxValue;
+}
+
 void bai3() {
 	srand(time(NULL));
 	int m = 5;
@@ -254,6 +279,10 @@ void bai3() {
 	lietKeCacDongChuaToanGiaTriChan(a, m, n);
 		
 	lietKeCacDongChuaGiaTriGiamDan(a, m, n);
+
+	printf("Gia tri xuat hien nhieu nhat trong ma tran la: %d", timGiaTriXuatHienNhieuNhat(a, m, n));
+
+
 
 	return;
 }
