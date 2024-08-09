@@ -286,6 +286,24 @@ void lietKeCotCoTongNhoNhat(int a[][100], int m, int n) {
 	}
 }
 
+//Hoán vị hai cột i và j trong ma trận
+void hoanViHaiCot(int a[][100], int m, int n, int i, int j) {
+	for (int k = 0; k < m; k++) {
+		int temp = a[k][i];
+		a[k][i] = a[k][j];
+		a[k][j] = temp;
+	}
+}
+
+//Hoán vị hai dòng k và l trong ma trận
+void hoanViHaiDong(int a[][100], int m, int n, int k, int l) {
+	for (int j = 0; j < n; j++) {
+		int temp = a[k][j];
+		a[k][j] = a[l][j];
+		a[l][j] = temp;
+	}
+}
+
 void bai3() {
 	srand(time(NULL));
 	int m = 5;
@@ -341,6 +359,15 @@ void bai3() {
 	printf("Chu so xuat hien nhieu nhat trong ma tran la: %d\n", chuSoNhieuNhat);
 
 
+	//14
+	hoanViHaiDong(a, m, n, 1, 2);
+	printf("\nMang 2 chieu sau khi hoan vi dong 1 va 2: \n");
+	xuatMang2ChieuBai3(a, m, n);
+
+	//13
+	hoanViHaiCot(a, m, n, 1, 2);
+	printf("\nMang 2 chieu sau khi hoan vi cot 1 va 2: \n");
+	xuatMang2ChieuBai3(a, m, n);
 
 	return;
 }
