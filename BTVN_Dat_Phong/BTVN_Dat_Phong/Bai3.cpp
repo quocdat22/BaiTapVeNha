@@ -102,6 +102,19 @@ void xuatCacPhanTuCucTieu(int a[][100], int m, int n) {
 	printf("\n");
 }
 
+//Sắp xếp ma trận sao cho: các dòng có chỉ số lẻ thì tăng dần, còn các dòng có chỉ số chẵn thì giảm dần.
+void sapXepDongTangDanBai3(int arr[], int n) {
+	for (int i = 0; i < n - 1; i++) {
+		for (int j = i + 1; j < n; j++) {
+			if (arr[i] > arr[j]) {
+				int temp = arr[i];
+				arr[i] = arr[j];
+				arr[j] = temp;
+			}
+		}
+	}
+}
+
 void bai3() {
 	srand(time(NULL));
 	int m = 5;
@@ -121,6 +134,11 @@ void bai3() {
 	printf("\nSo luong phan tu chua chu so 2 trong ma tran la: %d", demSoLuongPhanTuChuaChuSo2(a, m, n));
 
 	xuatCacPhanTuCucTieu(a, m, n);
+
+	sapXepDongTangDanBai3(a[1], n);
+	
+
+	
 
 
 	return;
