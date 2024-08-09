@@ -29,12 +29,28 @@ void sapXepDuongCheoPhu(int maTran[][100], int n) {
 
 //in mang 2 chieu
 void inMang2Chieu(int maTran[][100], int n) {
-    printf("Ma tran sau khi sap xep:\n");
+    
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < n; j++) {
             printf("%d ", maTran[i][j]);
         }
         printf("\n");
+    }
+}
+
+// Hàm sắp xếp các dòng của ma trận
+void sapXepCacDong(int maTran[][100], int n) {
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n - 1; j++) {
+            for (int k = j + 1; k < n; k++) {
+                if ((i % 2 == 0 && maTran[i][j] < maTran[i][k]) ||
+                    (i % 2 != 0 && maTran[i][j] > maTran[i][k])) {
+                    int temp = maTran[i][j];
+                    maTran[i][j] = maTran[i][k];
+                    maTran[i][k] = temp;
+                }
+            }
+        }
     }
 }
 
@@ -54,7 +70,11 @@ int main() {
     }
 
     // Gọi các hàm xử lý ma trận
-    sapXepDuongCheoPhu(maTran, n);
+   /* sapXepDuongCheoPhu(maTran, n);
+    inMang2Chieu(maTran, n);*/
+
+    sapXepCacDong(maTran, n);
+    printf("Ma tran sau khi sap xep cac dong:\n");
     inMang2Chieu(maTran, n);
 
     
