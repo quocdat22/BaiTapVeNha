@@ -152,6 +152,29 @@ void sapXepMaTranLeGiamChanTang(int a[][100], int m, int n) {
 	}
 }
 
+int kiemTraZiczacCot(int a[][100], int m, int n) {
+	for (int j = 0; j < n; j++) {
+		for (int i = 0; i < m - 1; i++) {
+			if (a[i][j] < a[i + 1][j]) {
+				return 0; // Không thỏa mãn điều kiện giảm dần
+			}
+		}
+	}
+	return 1; // Thỏa mãn điều kiện giảm dần
+}
+
+
+int kiemTraZiczacDong(int a[][100], int m, int n) {
+	for (int i = 0; i < m; i++) {
+		for (int j = 0; j < n - 1; j++) {
+			if (a[i][j] < a[i][j + 1]) {
+				return 0; // Không thỏa mãn điều kiện giảm dần theo dòng
+			}
+		}
+	}
+	return 1; // Thỏa mãn điều kiện giảm dần theo dòng
+}
+
 void bai3() {
 	srand(time(NULL));
 	int m = 5;
