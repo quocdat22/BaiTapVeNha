@@ -1,8 +1,8 @@
 ﻿  Buoi4.cpp
 C:\Users\WIN-MAC\Desktop\Tài Liệu Môn Học\THKTLT_BTVN\BaiTapVeNha\BTVN_Dat_Phong\BTVN_Buoi4\Buoi4.cpp(33,22): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-C:\Users\WIN-MAC\Desktop\Tài Liệu Môn Học\THKTLT_BTVN\BaiTapVeNha\BTVN_Dat_Phong\BTVN_Buoi4\Buoi4.cpp(56,9): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Users\WIN-MAC\Desktop\Tài Liệu Môn Học\THKTLT_BTVN\BaiTapVeNha\BTVN_Dat_Phong\BTVN_Buoi4\Buoi4.cpp(46,10): warning C4101: 'students': unreferenced local variable
-C:\Users\WIN-MAC\Desktop\Tài Liệu Môn Học\THKTLT_BTVN\BaiTapVeNha\BTVN_Dat_Phong\BTVN_Buoi4\Buoi4.cpp(45,18): warning C4101: 'lastName': unreferenced local variable
-C:\Users\WIN-MAC\Desktop\Tài Liệu Môn Học\THKTLT_BTVN\BaiTapVeNha\BTVN_Dat_Phong\BTVN_Buoi4\Buoi4.cpp(47,9): warning C4101: 'n': unreferenced local variable
-C:\Users\WIN-MAC\Desktop\Tài Liệu Môn Học\THKTLT_BTVN\BaiTapVeNha\BTVN_Dat_Phong\BTVN_Buoi4\Buoi4.cpp(45,33): warning C4101: 'firstName': unreferenced local variable
+C:\Users\WIN-MAC\Desktop\Tài Liệu Môn Học\THKTLT_BTVN\BaiTapVeNha\BTVN_Dat_Phong\BTVN_Buoi4\Buoi4.cpp(67,9): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\WIN-MAC\Desktop\Tài Liệu Môn Học\THKTLT_BTVN\BaiTapVeNha\BTVN_Dat_Phong\BTVN_Buoi4\Buoi4.cpp(56,10): warning C4101: 'students': unreferenced local variable
+C:\Users\WIN-MAC\Desktop\Tài Liệu Môn Học\THKTLT_BTVN\BaiTapVeNha\BTVN_Dat_Phong\BTVN_Buoi4\Buoi4.cpp(55,18): warning C4101: 'lastName': unreferenced local variable
+C:\Users\WIN-MAC\Desktop\Tài Liệu Môn Học\THKTLT_BTVN\BaiTapVeNha\BTVN_Dat_Phong\BTVN_Buoi4\Buoi4.cpp(57,9): warning C4101: 'n': unreferenced local variable
+C:\Users\WIN-MAC\Desktop\Tài Liệu Môn Học\THKTLT_BTVN\BaiTapVeNha\BTVN_Dat_Phong\BTVN_Buoi4\Buoi4.cpp(55,33): warning C4101: 'firstName': unreferenced local variable
   BTVN_Buoi4.vcxproj -> C:\Users\WIN-MAC\Desktop\Tài Liệu Môn Học\THKTLT_BTVN\BaiTapVeNha\BTVN_Dat_Phong\x64\Debug\BTVN_Buoi4.exe
