@@ -63,6 +63,43 @@ void listOccurrences(int a[], int n) {
         }
     }
 }
+void sortEvenAscOddDesc(int a[], int n) {
+    int even[100], odd[100];
+    int evenCount = 0, oddCount = 0;
+    for (int i = 0; i < n; i++) {
+        if (a[i] % 2 == 0) {
+            even[evenCount++] = a[i];
+        }
+        else {
+            odd[oddCount++] = a[i];
+        }
+    }
+    for (int i = 0; i < evenCount - 1; i++) {
+        for (int j = i + 1; j < evenCount; j++) {
+            if (even[i] > even[j]) {
+                int temp = even[i];
+                even[i] = even[j];
+                even[j] = temp;
+            }
+        }
+    }
+    for (int i = 0; i < oddCount - 1; i++) {
+        for (int j = i + 1; j < oddCount; j++) {
+            if (odd[i] < odd[j]) {
+                int temp = odd[i];
+                odd[i] = odd[j];
+                odd[j] = temp;
+            }
+        }
+    }
+    int idx = 0;
+    for (int i = 0; i < evenCount; i++) {
+        a[idx++] = even[i];
+    }
+    for (int i = 0; i < oddCount; i++) {
+        a[idx++] = odd[i];
+    }
+}
 void printArray(int a[], int n) {
     for (int i = 0; i < n; i++) {
         printf("%d ", a[i]);
@@ -81,6 +118,7 @@ int main() {
         printf("2. Liet ke cac so nguyen to nho hon n\n");
         printf("3. Tinh tong cac phan tu co chu so dau la chu so le\n");
         printf("4. Liet ke so lan xuat hien cua cac phan tu trong mang\n");
+        printf("5. Sap xep mang chan tang dan, le giam dan\n");
         printf("0. Thoat\n");
         printf("Nhap lua chon: ");
         scanf_s("%d", &choice);
@@ -101,6 +139,11 @@ int main() {
             break;
         case 4:
             listOccurrences(a, n);
+            break;
+        case 5:
+            sortEvenAscOddDesc(a, n);
+            printf("Mang sau khi sap xep chan tang dan, le giam dan: ");
+            printArray(a, n);
             break;
         case 0:
             printf("Thoat chuong trinh.\n");
