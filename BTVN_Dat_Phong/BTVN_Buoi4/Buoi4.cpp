@@ -12,6 +12,23 @@ int isDigitsOnly(char* s) {
     }
     return 1;
 }
+void capitalizeWords(char* s) {
+    int inWord = 0;
+    for (int i = 0; s[i] != '\0'; i++) {
+        if (isspace(s[i])) {
+            inWord = 0;
+        }
+        else {
+            if (!inWord) {
+                s[i] = toupper(s[i]);
+                inWord = 1;
+            }
+            else {
+                s[i] = tolower(s[i]);
+            }
+        }
+    }
+}
 int main() {
     int choice;
     char s[100], lastName[100], firstName[100];
@@ -21,7 +38,7 @@ int main() {
     do {
         printf("\n--- MENU ---\n");
         printf("1. Kiem tra chuoi s co toan ky so hay khong\n");
- 
+        printf("2. Doi ki tu dau cua moi tu thanh chu in hoa\n");
         printf("0. Thoat\n");
         printf("Nhap lua chon cua ban: ");
         scanf("%d", &choice);
@@ -41,7 +58,13 @@ int main() {
             break;
 
         
-
+        case 2:
+            printf("Nhap chuoi s: ");
+            fgets(s, 100, stdin);
+            s[strcspn(s, "\n")] = 0;
+            capitalizeWords(s);
+            printf("Chuoi sau khi doi ki tu: %s\n", s);
+            break;
         case 0:
             printf("Thoat chuong trinh.\n");
             break;
