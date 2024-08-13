@@ -62,6 +62,47 @@ void splitName(char* fullName, char* lastName, char* firstName) {
         strcpy(lastName, "");
     }
 }
+void inputStudents(char students[][100], int* n) {
+    printf("Nhap so luong sinh vien: ");
+    scanf("%d", n);
+    getchar();
+    for (int i = 0; i < *n; i++) {
+        printf("Nhap ten sinh vien thu %d: ", i + 1);
+        fgets(students[i], 100, stdin);
+        students[i][strcspn(students[i], "\n")] = 0;
+    }
+}
+
+
+void displayStudents(char students[][100], int n) {
+    printf("Danh sach sinh vien:\n");
+    for (int i = 0; i < n; i++) {
+        printf("%d. %s\n", i + 1, students[i]);
+    }
+}
+
+
+void bruteForceSearch(char* T, char* P) {
+    int n = strlen(T);
+    int m = strlen(P);
+    int found = 0;
+
+    for (int i = 0; i <= n - m; i++) {
+        int j;
+        for (j = 0; j < m; j++) {
+            if (T[i + j] != P[j]) {
+                break;
+            }
+        }
+        if (j == m) {
+            printf("Chuoi '%s' xuat hien o vi tri %d trong chuoi T.\n", P, i + 1);
+            found = 1;
+        }
+    }
+    if (!found) {
+        printf("Chuoi '%s' khong xuat hien trong chuoi T.\n", P);
+    }
+}
 int main() {
     int choice;
     char s[100], lastName[100], firstName[100];
@@ -75,6 +116,7 @@ int main() {
         printf("3. Xoa khoang trang thua trong chuoi\n");
         printf("4. Tim kiem ten trong chuoi ho ten\n");
         printf("5. Cat chuoi ho ten thanh ho lot va ten\n");
+        printf("6. Nhap danh sach sinh vien va tim chuoi P trong T\n");
         printf("0. Thoat\n");
         printf("Nhap lua chon cua ban: ");
         scanf("%d", &choice);
@@ -125,6 +167,18 @@ int main() {
             splitName(s, lastName, firstName);
             printf("Ho lot: %s\n", lastName);
             printf("Ten: %s\n", firstName);
+            break;
+        case 6:
+            inputStudents(students, &n);
+            displayStudents(students, n);
+            printf("Nhap chuoi T: ");
+            fgets(s, 100, stdin);
+            s[strcspn(s, "\n")] = 0;
+            printf("Nhap chuoi P: ");
+            char P[100];
+            fgets(P, 100, stdin);
+            P[strcspn(P, "\n")] = 0;
+            bruteForceSearch(s, P);
             break;
         case 0:
             printf("Thoat chuong trinh.\n");
