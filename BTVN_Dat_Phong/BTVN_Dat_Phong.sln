@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BTVN_Dat_Phong", "BTVN_Dat_
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BTVN_Buoi2", "BTVN_Buoi2\BTVN_Buoi2.vcxproj", "{EFBC837A-D1AD-4B03-ACD1-AEB2D7209C5A}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BTVN_Buoi4", "BTVN_Buoi4\BTVN_Buoi4.vcxproj", "{BCDB8E70-D2A1-4250-87DE-041DA267A997}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -31,6 +33,14 @@ Global
 		{EFBC837A-D1AD-4B03-ACD1-AEB2D7209C5A}.Release|x64.Build.0 = Release|x64
 		{EFBC837A-D1AD-4B03-ACD1-AEB2D7209C5A}.Release|x86.ActiveCfg = Release|Win32
 		{EFBC837A-D1AD-4B03-ACD1-AEB2D7209C5A}.Release|x86.Build.0 = Release|Win32
+		{BCDB8E70-D2A1-4250-87DE-041DA267A997}.Debug|x64.ActiveCfg = Debug|x64
+		{BCDB8E70-D2A1-4250-87DE-041DA267A997}.Debug|x64.Build.0 = Debug|x64
+		{BCDB8E70-D2A1-4250-87DE-041DA267A997}.Debug|x86.ActiveCfg = Debug|Win32
+		{BCDB8E70-D2A1-4250-87DE-041DA267A997}.Debug|x86.Build.0 = Debug|Win32
+		{BCDB8E70-D2A1-4250-87DE-041DA267A997}.Release|x64.ActiveCfg = Release|x64
+		{BCDB8E70-D2A1-4250-87DE-041DA267A997}.Release|x64.Build.0 = Release|x64
+		{BCDB8E70-D2A1-4250-87DE-041DA267A997}.Release|x86.ActiveCfg = Release|Win32
+		{BCDB8E70-D2A1-4250-87DE-041DA267A997}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
