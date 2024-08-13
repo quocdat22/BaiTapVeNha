@@ -50,6 +50,18 @@ int findName(char* fullName, char* name) {
         return 0;
     }
 }
+void splitName(char* fullName, char* lastName, char* firstName) {
+    char* lastSpace = strrchr(fullName, ' ');
+    if (lastSpace != NULL) {
+        strcpy(firstName, lastSpace + 1);
+        strncpy(lastName, fullName, lastSpace - fullName);
+        lastName[lastSpace - fullName] = '\0';
+    }
+    else {
+        strcpy(firstName, fullName);
+        strcpy(lastName, "");
+    }
+}
 int main() {
     int choice;
     char s[100], lastName[100], firstName[100];
@@ -62,6 +74,7 @@ int main() {
         printf("2. Doi ki tu dau cua moi tu thanh chu in hoa\n");
         printf("3. Xoa khoang trang thua trong chuoi\n");
         printf("4. Tim kiem ten trong chuoi ho ten\n");
+        printf("5. Cat chuoi ho ten thanh ho lot va ten\n");
         printf("0. Thoat\n");
         printf("Nhap lua chon cua ban: ");
         scanf("%d", &choice);
@@ -104,6 +117,14 @@ int main() {
             fgets(name, 50, stdin);
             name[strcspn(name, "\n")] = 0;
             findName(s, name);
+            break;
+        case 5:
+            printf("Nhap chuoi ho ten: ");
+            fgets(s, 100, stdin);
+            s[strcspn(s, "\n")] = 0;
+            splitName(s, lastName, firstName);
+            printf("Ho lot: %s\n", lastName);
+            printf("Ten: %s\n", firstName);
             break;
         case 0:
             printf("Thoat chuong trinh.\n");
