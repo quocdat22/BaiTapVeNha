@@ -48,6 +48,21 @@ int sumOddLeadingDigit(int a[], int n) {
     }
     return sum;
 }
+void listOccurrences(int a[], int n) {
+    int counted[100] = { 0 };
+    for (int i = 0; i < n; i++) {
+        if (!counted[i]) {
+            int count = 1;
+            for (int j = i + 1; j < n; j++) {
+                if (a[j] == a[i]) {
+                    count++;
+                    counted[j] = 1;
+                }
+            }
+            printf("%d xuat hien %d lan\n", a[i], count);
+        }
+    }
+}
 void printArray(int a[], int n) {
     for (int i = 0; i < n; i++) {
         printf("%d ", a[i]);
@@ -65,6 +80,7 @@ int main() {
         printf("1. Liet ke cac so 15 phan tu\n");
         printf("2. Liet ke cac so nguyen to nho hon n\n");
         printf("3. Tinh tong cac phan tu co chu so dau la chu so le\n");
+        printf("4. Liet ke so lan xuat hien cua cac phan tu trong mang\n");
         printf("0. Thoat\n");
         printf("Nhap lua chon: ");
         scanf_s("%d", &choice);
@@ -82,6 +98,9 @@ int main() {
             break;
         case 3:
             printf("Tong cac phan tu co chu so dau la chu so le: %d\n", sumOddLeadingDigit(a, n));
+            break;
+        case 4:
+            listOccurrences(a, n);
             break;
         case 0:
             printf("Thoat chuong trinh.\n");
