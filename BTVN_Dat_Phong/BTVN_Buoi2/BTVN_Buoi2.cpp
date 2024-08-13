@@ -122,6 +122,30 @@ void longestDecreasingSubarray(int a[], int n) {
     }
     printf("\n");
 }
+int findSecondSmallest(int a[], int n) {
+    if (n < 2) {
+        printf("Mang phai co it nhat 2 phan tu\n");
+        return -1; // Trường hợp mảng có ít hơn 2 phần tử
+    }
+
+    int min = INT_MAX, secondMin = INT_MAX;
+    for (int i = 0; i < n; i++) {
+        if (a[i] < min) {
+            secondMin = min;
+            min = a[i];
+        }
+        else if (a[i] < secondMin && a[i] != min) {
+            secondMin = a[i];
+        }
+    }
+
+    if (secondMin == INT_MAX) {
+        printf("Khong co so nho thu 2 trong mang\n");
+        return -1; // Trường hợp không có số nhỏ thứ 2
+    }
+
+    return secondMin;
+}
 void printArray(int a[], int n) {
     for (int i = 0; i < n; i++) {
         printf("%d ", a[i]);
@@ -141,6 +165,8 @@ int main() {
         printf("3. Tinh tong cac phan tu co chu so dau la chu so le\n");
         printf("4. Liet ke so lan xuat hien cua cac phan tu trong mang\n");
         printf("5. Sap xep mang chan tang dan, le giam dan\n");
+        printf("6. Tim day con giam dai nhat trong a\n");
+        printf("7. Tim so nho thu 2 trong mang\n");
         printf("0. Thoat\n");
         printf("Nhap lua chon: ");
         scanf_s("%d", &choice);
@@ -166,6 +192,12 @@ int main() {
             sortEvenAscOddDesc(a, n);
             printf("Mang sau khi sap xep chan tang dan, le giam dan: ");
             printArray(a, n);
+            break;
+        case 6:
+            longestDecreasingSubarray(a, n);
+            break;
+        case 7:
+            printf("So nho thu 2 trong mang: %d\n", findSecondSmallest(a, n));
             break;
         case 0:
             printf("Thoat chuong trinh.\n");
