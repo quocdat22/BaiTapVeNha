@@ -100,6 +100,28 @@ void sortEvenAscOddDesc(int a[], int n) {
         a[idx++] = odd[i];
     }
 }
+void longestDecreasingSubarray(int a[], int n) {
+    int maxLength = 1, length = 1;
+    int startIndex = 0, maxStartIndex = 0;
+    for (int i = 1; i < n; i++) {
+        if (a[i] < a[i - 1]) {
+            length++;
+            if (length > maxLength) {
+                maxLength = length;
+                maxStartIndex = startIndex;
+            }
+        }
+        else {
+            length = 1;
+            startIndex = i;
+        }
+    }
+    printf("Day con giam dai nhat:\n");
+    for (int i = maxStartIndex; i < maxStartIndex + maxLength; i++) {
+        printf("%d ", a[i]);
+    }
+    printf("\n");
+}
 void printArray(int a[], int n) {
     for (int i = 0; i < n; i++) {
         printf("%d ", a[i]);
